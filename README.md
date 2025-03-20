@@ -1,4 +1,4 @@
-# das2-2025
+![image](https://github.com/user-attachments/assets/5e29bdf3-88bb-4f16-82e5-155647838ad2)# das2-2025
 
 ## Aula 27/02
 
@@ -56,4 +56,16 @@
 # Permissões para acessar recursos
 - dar permissão ao usuário apenas sobre o que ele pode fazer
 
+# S3
+
+- A chance de não perder o objeto é 100% -> durabilidade
+- A disponibilidade é de 99.99% mas da para melhorar se replicar o s3 para outro bucket
+- Para ter alta disponibilidade tem que ter copia do bucket 
+- Para que usar o S3? hospedar um site estático
+- Não da para hospedar um monolito no S3
+- Movendo dados para o S3: Não tem limites de objeto num bucket, precisa de permissão do bucket, Objetos são encriptados por padrão
+- CLI -> aws s3 cp arquivoorigem s3://bucketdestino
+- O Multipart Upload do AWS S3 é um método de upload que divide arquivos grandes em várias partes menores, enviando-as paralelamente para acelerar a transferência e melhorar a resiliência.
+- AWS Direct Connect -> conexão mais poderosa com a aws OBS: Não é criptografado
+- Object storage classes -> forma como o S3 guarda os arquivos, afeta diretamente preço e disponibilidade
   
