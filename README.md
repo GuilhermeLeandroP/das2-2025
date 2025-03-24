@@ -1,11 +1,7 @@
-![image](https://github.com/user-attachments/assets/5e29bdf3-88bb-4f16-82e5-155647838ad2)# das2-2025
-
-## Aula 27/02
+# das2-2025
 
 - Recursos são descartáveis, porque é so matar e criar um novo
 - IAC = insfraestructure as a code
-
-## 06/03
 
 - Melhor prática -> colocar um load balancer para balancear a carga e não cair o recurso
 - LoadBalancer tem o HealthCheck -> Ele verifica a "saúde" da máquina
@@ -58,6 +54,7 @@
 
 # S3
 
+- NÃO É POSSÍVEL EDITAR UMA ARQUIVO DENTRO DO S3, ELE NÃO É UM SISTEMA DE GERENCIAMENTO DE ARQUIVOS
 - A chance de não perder o objeto é 100% -> durabilidade
 - A disponibilidade é de 99.99% mas da para melhorar se replicar o s3 para outro bucket
 - Para ter alta disponibilidade tem que ter copia do bucket 
@@ -65,7 +62,48 @@
 - Não da para hospedar um monolito no S3
 - Movendo dados para o S3: Não tem limites de objeto num bucket, precisa de permissão do bucket, Objetos são encriptados por padrão
 - CLI -> aws s3 cp arquivoorigem s3://bucketdestino
+
 - O Multipart Upload do AWS S3 é um método de upload que divide arquivos grandes em várias partes menores, enviando-as paralelamente para acelerar a transferência e melhorar a resiliência.
 - AWS Direct Connect -> conexão mais poderosa com a aws OBS: Não é criptografado
 - Object storage classes -> forma como o S3 guarda os arquivos, afeta diretamente preço e disponibilidade
-  
+
+# S3 Lifecycle
+
+- O que é? Conjunto de regras que cria para transcionar ou expirar objetos, Ex: depois de 7 anos apague, depois de 2 anos mova para o s3 glacier
+
+# S3 versionamento
+
+- Todo balde nasce com o versionamento desligado
+- Depois que ligar o versionamento, não pode retirar, só pausar
+- Algumas funcionalidades só funciona com versionamento
+- Cada versão é uma cópia inteira do objeto, e isso impacta diretamente no objeto
+
+# S3 CORS(Cross-origin resource sharing) - proteção
+
+- é a aws que libera a permissão para o CORS
+- Exemplo de permissão CORS:
+
+    [
+    {
+        "AllowedHeaders": [
+            "*"
+        ],
+        "AllowedMethods": [
+            "GET",
+            "PUT",
+            "POST",
+            "DELETE"
+        ],
+        "AllowedOrigins": [
+            "http://127.0.0.1:5500"
+        ],
+        "ExposeHeaders": [
+            "x-amz-server-side-encryption",
+            "x-amz-request-id",
+            "x-amz-id-2"
+        ],
+        "MaxAgeSeconds": 3000
+    }
+]
+
+
