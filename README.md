@@ -106,4 +106,26 @@
     }
 ]
 
+# EC2
+- É um serviço da Amazon que permite criar e hospedar sistemas de software na nuvem
 
+- **Instance Metadata ** -> API REST para que o seu servidor possa perguntar para a AWS coi
+- sas que ele não sabe, por exemplo o ip publico
+
+- EFS(Elastic file system)
+  -Linux
+  - Paga por dados consumidos
+
+- EFx 
+  - Mesma coisa do EFS so q para windows
+  - Esse eu preciso supervisionar o quanto vai cobrar pelo o que eu tenho
+
+- Placement strategies
+    ->Cluster
+    ->Partition, nem todas as ferarmentas tem, por exemplo o RabbitM
+    ->Spread
+
+- EC2 purchase models
+  - On-demand -> Tudo que quiser, a hora que quiser
+  - Reserved -> Quero vir todo dia, no mesmo horario e usar o mesmo equipamento(esteira), engessado, não tem flexibilidade para mudar as configurações
+  - Saving plans -> Aws, vou gastar 2 dolares por hora com voce, por 1 ano ou 3 anos, flexivel para alterar as configurações
