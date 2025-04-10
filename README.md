@@ -129,3 +129,16 @@
   - On-demand -> Tudo que quiser, a hora que quiser
   - Reserved -> Quero vir todo dia, no mesmo horario e usar o mesmo equipamento(esteira), engessado, não tem flexibilidade para mudar as configurações
   - Saving plans -> Aws, vou gastar 2 dolares por hora com voce, por 1 ano ou 3 anos, flexivel para alterar as configurações
+# DATABASE
+
+- Relacional = Escala com dor, escala vertical = aumentar cpu, memoria
+- Não relacional = Schemas flexiveis, escalam normalmente e horizontalmente = copia do banco, particinamento automatico
+
+# RDS (RELATIONAL DATABASE SERVICE)
+
+- Serviço de banco de dados gerenciado
+- Usa os outros serviços de banco por baixo
+- MySQL, MariaDB, Postgress, Sqlserver, Oracle, IBM DB2, Aurora
+- Aurora = banco de dados criado pela aws
+
+# Dynamo/Neptune/Elastic cache (Non-relational database)
