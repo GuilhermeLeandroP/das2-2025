@@ -142,3 +142,15 @@
 - Aurora = banco de dados criado pela aws
 
 # Dynamo/Neptune/Elastic cache (Non-relational database)
+
+# Amazon VPC(rede) -> Software defined network(sdn)
+
+- é um serviço da AWS que permite criar uma rede virtual isolada dentro da nuvem, que você pode personalizar e controlar
+- Tudo dentro de um região é interconectado, porém eles nao se conectam com outras regiões a nao ser que voce queria
+- toda vez que voce cria uma rede, ela fica sempre dentro de uma região
+- CIDR -> Tamanho da rede definido pelo usuário
+- O usuário customiza o tráfico
+- Toda VPC tem uma tabela de rotas padrão, com uma regra que diz que qualquer coisa dentro da rede se comunique
+- subsnets vivem dentro de uma az, quando voce cria uma subnet, voce diz que ela vai ficar em um lugar do mundo
+- subnet public é uma subnet que esta publica de fora pra dentro e de dentro pra fora pra internet
+- internet gateway -> responsável pelo NAT, se liga a vpc, recebe os ips que nao sao locais(da internet), e nele, tem o ip publico associado ao ip publico da subnet
