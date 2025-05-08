@@ -154,3 +154,19 @@
 - subsnets vivem dentro de uma az, quando voce cria uma subnet, voce diz que ela vai ficar em um lugar do mundo
 - subnet public é uma subnet que esta publica de fora pra dentro e de dentro pra fora pra internet
 - internet gateway -> responsável pelo NAT, se liga a vpc, recebe os ips que nao sao locais(da internet), e nele, tem o ip publico associado ao ip publico da subnet
+- subnet privada -> não conversa com a internet ou algo fora da vpc
+    - é onde vai colocar banco de dados, file share ou kafka
+-Nat gateway serve para uma subnet privada se conectar com a net
+- a opção de graça para o nat gateway é o gateway vpc endpoints, porem so conecta com s3 e DynamoDB
+# Security group e Network acl
+- Security group funcioona como o tio da portaria, ele libera ou nao de acordo com a identidade do dado de rede
+  -se liberou a saida, a entrada ta permitida e se liberou a entrada a saida ta permitida
+- Network acl ->  firewall stateless é um tipo de firewall que avalia cada pacote de rede individualmente, sem manter informações sobre o estado de uma conexão. Em vez de rastrear o fluxo de pacotes de uma sessão, ele analisa cada pacote baseado nas informações contidas no seu cabeçalho (como endereço IP, endereço MAC, etc.).
+
+# Gateway Load balancer
+
+- Nao consigo escrever e prestar atençap ao mesmo tempo
+
+# Amazon VPC flow Logs
+- trilha de auditoria para ver se as maquinas estao se comunicando
+- 
