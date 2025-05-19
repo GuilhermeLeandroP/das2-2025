@@ -158,6 +158,7 @@
     - é onde vai colocar banco de dados, file share ou kafka
 -Nat gateway serve para uma subnet privada se conectar com a net
 - a opção de graça para o nat gateway é o gateway vpc endpoints, porem so conecta com s3 e DynamoDB
+- Redes são isoldas
 # Security group e Network acl
 - Security group funcioona como o tio da portaria, ele libera ou nao de acordo com a identidade do dado de rede
   -se liberou a saida, a entrada ta permitida e se liberou a entrada a saida ta permitida
@@ -167,6 +168,33 @@
 
 - Nao consigo escrever e prestar atençap ao mesmo tempo
 
+
 # Amazon VPC flow Logs
 - trilha de auditoria para ver se as maquinas estao se comunicando
-- 
+
+# VPC FULL MESH ARCHITECTURE
+- nao pode ter coalisão
+- Conversa com todas as redes
+
+# SHARED VPC
+
+- vpc central(hub) onde coloca os serviços compartilhaddos, e tem as vpcs spoke que conversam com o hub
+- VPC spoke só conversa com o hub
+
+# AWS transit gateway
+- tem custo por dados processados
+- Ajuda as redes a se conversar
+- Serviço regional(vive dentro de uma região da aws)
+- Consegue conecctar 5 mil attachments nele
+- Da para conectar os ATG entre regiões
+- não é toda empresa que precisa do transit gateway
+- Peering transit gateway -> conectar mais de 1 transit gateway
+  
+# VPC Peering 
+- outro metodo para subtituir o transit gateway
+- Se conectar entre regioes é de graça
+- puxar um cabo de rede de uma vpc para outra
+- Não tem transitividade, por exemplo A -B , B - C , nesse caso aqui, A não converta com C, só se fizer um peering de A para C
+
+# AWS DIRECT CONNECT
+- Vai ser feito um circuito de rede para conectar um datacenter até a empresa
