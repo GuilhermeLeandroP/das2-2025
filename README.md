@@ -198,3 +198,15 @@
 
 # AWS DIRECT CONNECT
 - Vai ser feito um circuito de rede para conectar um datacenter até a empresa
+
+# IAM GROUPS
+- Eu crio uma função, por exemplo, desenvolvedores, e associa as permissões da funçao, e associo as pessoas ao grupo
+- Em conflito de permissão, o deny tem prioridade
+
+# RBAC (Role-based-acess-control)
+- Acesso temporario com determinadas permissões
+- quando o usuario acessa a role, ele ganha uma credencial nova e temporaria
+
+# ABAC (Attribute-based-acess-controll)
+- Não cria policy fixa, cria police dinamica, exemplo, so pode acessar os objetos do S3 se tiver a tag do usuário
+
