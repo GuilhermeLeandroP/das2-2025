@@ -128,5 +128,21 @@
 
 ### Governança em Escala
 - **AWS Organizations**: Gestão centralizada de múltiplas contas
-- **Control Tower**: Setup automatizado de landing zone
+- **Control Tower**: Setup automatizado de landing zone bem projetado, da melhor forma possível
 - **Cognito**: Gerenciamento de identidade para usuários finais
+
+# Alta Disponibilidade
+
+## CloudWatch
+
+- **Logs**: ele mostra logs(pago)
+- **Métrica**: Mostra as métrica(gratuito), gera gráficos e alarmes. Exemplo: Da um alerta se a CPU de um EC2 estiver acima de 70%
+
+## EventBridge
+- Barramentos de eventos em tempo real, jeito de monitor a AWS em tempo real
+- Da para usar como broker de eventos
+
+## AWS COST,
+
+
+
