@@ -91,6 +91,12 @@
 - **Spread**: Máxima disponibilidade (AZs distintas)
 - **Partition**: Isolamento para workloads críticos
 
+### EC2 Auto scaling
+
+- Scheduled actions: Precisa de uma regra para dizer como vai se comportar, exemplo: as 8 horas suba 10 máquinas para os funcionários
+- Dynamic policies: é baseado em métrica, por exemplo: mantenha a cpu média em 60%
+- Predictive policy: Analisa o trafico
+
 ## 🧠 IAM - Gerenciamento de Acesso
 
 ### Modelos de Controle
@@ -142,7 +148,13 @@
 - Barramentos de eventos em tempo real, jeito de monitor a AWS em tempo real
 - Da para usar como broker de eventos
 
-## AWS COST,
+## Escalabilidade vertical
+- Noite de natal = papai noel, preciso de uma placa de video monstruosa para aprender a programar = tornar a máquina maior
+
+## Escalabilidade horizontal
+- AWS, eu tenho um computador, faça mais 2 máquinas 
+
+
 
 
 
